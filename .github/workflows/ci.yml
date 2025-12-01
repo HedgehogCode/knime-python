@@ -41,7 +41,15 @@ jobs:
       - uses: prefix-dev/setup-pixi@v0.9.3
         with:
           cache: true
-      - run: pixi run -e ${{ matrix.environment }} test
+      - name: pytest - ${{ matrix.environment }}
+        run: pixi run -e ${{ matrix.environment }} test --junit-xml=pytest-${{ matrix.environment }}.xml
+      - name: Test Report
+        uses: dorny/test-reporter@v2
+        if: ${{ !cancelled() }}
+        with:
+          name: pytest - ${{ matrix.environment }}
+          path: pytest-*.xml
+          reporter: java-junit
 
   js-lint-test-build:
     name: JS lint, tests, and build
