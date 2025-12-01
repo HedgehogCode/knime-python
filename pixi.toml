@@ -84,7 +84,7 @@ knime-python-base = "5.5.*"
 python = "3.12.*"
 # knime-python-base = "5.6.*"
 pyarrow = "21.0.*"
-py4j = "0.10.9"
+py4j = "0.10.9.*"
 pandas = "2.3.*"
 markdown = "3.8.*"
 
@@ -94,7 +94,7 @@ python = "3.13.*"
 # knime-python-base = "5.6.*"
 pyarrow = "21.0.*"
 pandas = "2.3.*"
-py4j = "0.10.9"
+py4j = "0.10.9.*"
 markdown = "3.8.*"
 
 [feature.py314kn56.dependencies]
@@ -102,7 +102,7 @@ python = "3.14.*"
 # knime-python-base = "5.6.*"
 pyarrow = "21.0.*"
 pandas = "2.3.*"
-py4j = "0.10.9"
+py4j = "0.10.9.*"
 markdown = "3.8.*"
 
 # Docs building
